@@ -6,6 +6,73 @@
     </head>
         <body>
                 <h1>Boa tarde</h1>
+                <p> Os 3 estados de um repositório: working directory, index e HEAD
+
+                    working directory representa o estado atual dos arquivos no repositório. 
+                    Podemos utilizar o comando git add para adicioná-los ao index, ou staging area, 
+                    que representa uma visão preliminar das modificações que queremos definir para nosso projeto, 
+                    comparando essas ao HEAD, o último passo completo do nosso projeto, que serve de referência 
+                    para comparação do trabalho com o working directory
+
+
+
+                        Comandos do GIT:
+
+                        - Para verificar as versões do Projeto:
+                        git tag
+
+                        - Para baixar a versão desejada:
+                        git checkout v0.1
+
+                        - Para saber o que mudou nos arquivos:
+                        git diff v0.1 v0.2
+
+                        - Para saber quem realizou as alterações:
+                        git blame index.html  (para sair do blame basta apertar a tecla 'q')
+
+                        - Para associar uma pasta diretamente a um repositório (indica que essa pasta será o repositório):
+                        git init
+
+                        - Para verificar quais arquivos que pertencem ao repositório:
+                        git ls-files
+
+
+                        - Para verificar o Status dos arquivos do projeto.
+                        git status
+
+
+                        - Para adicionar o arquivo ao Git, assim o Git poderá controlar as alterações deste arquivo (Indica que este arquivo será commitado):
+                        git add index.html
+
+                        - Para realizar um add para muitos arquivos aconselha-se a usar:
+                        git add -i
+
+                        - Para informar ao Git que esse usuário será responsavel pela alterações do projeto/arquivos no repositório atual (utilizando o git blame será exibido o nome informado):
+                        git config user.name "seuNome"
+                        git config user.email "seuEmail"
+                        
+                        OBS: Usa-se git config --global user.name caso deseje fazer uma configuração global.
+
+                        - Para realizar o commit do arquivo/projeto:
+                        git commit "Mensagem informando o que está sendo feito neste commit"
+
+
+                        - Para adicionar um repositório remoto:
+                        git remote add [apelido_do_repositorio] [uri_do_repositorio]
+
+                        OBS: Uma convenção adotada, utiliza-se como apelido do repositório o nome "origin"
+
+                        Logo o comando final ficaria: git remote add origin https://github.com/jefferson-rangel/curso-git.git
+
+                        - Para commitar no repositório remoto:
+                        git push origin master 
+
+                        - Para sincronizar o seu projeto com o que está no repositório:
+                        git pull origin master
+
+                        - Para verificar o log dos commits:
+                        git log OU git whatchanged (é possível visualizar quais as linhas que foram modificadas em cada commit do nosso projeto.)
+</p>
 
         </body>
 </html>
